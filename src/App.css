@@ -1,38 +1,79 @@
 .App {
+  margin-top: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p, a:link {
+  font-family: TochkaSans-Regular, sans-serif;
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'AngleciaProTitleBold';
+  src: url('./fonts/anglecia/AngleciaProTitleBold.otf');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'TochkaSans-Regular';
+  src: url('./fonts/tochka sans/TochkaSans-Regular.otf');
+}
+
+.button-area {
+  display: flex;
+  margin-top: 90px;
+}
+
+h1, h2 {
+  font-family: AngleciaProTitleBold, sans-serif;
+}
+
+.header-space {
+  font-family: TochkaSans-Regular, sans-serif;
+  font-size: 20px;
+}
+
+.header-space::before {
+  content: '«';
+}
+
+.header-space::after {
+  content: '»';
+}
+
+.header-space-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 60px;
+  height: 250px;
+}
+
+.guessed {
+  color: green;
+}
+
+.not_guessed {
+  color: red;
+}
+
+.result-page {
+  border-radius: 20px;
+  padding: 20px 30px;
+  height: 400px;
+  width: 400px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, .07);
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-image {
+  align-self: center;
+  background: #fff url('pic/16 (1).png') no-repeat;
+  background-size: 200px;
+  height: 200px;
+  width: 200px;
 }
